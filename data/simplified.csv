@@ -1,0 +1,208 @@
+gname,row_idx,year,col_idx,nkill,nwound,casualty,counts
+Al-Qa`ida,1,1992,1.0,3,6,9,2
+Liberation Tigers of Tamil Eelam (LTTE),6,1992,1.0,927,440,1367,95
+Revolutionary Armed Forces of Colombia (FARC),7,1992,1.0,256,94,350,54
+Liberation Tigers of Tamil Eelam (LTTE),6,1994,3.0,171,399,570,25
+Revolutionary Armed Forces of Colombia (FARC),7,1994,3.0,90,30,120,39
+Liberation Tigers of Tamil Eelam (LTTE),6,1995,4.0,993,533,1526,111
+Revolutionary Armed Forces of Colombia (FARC),7,1995,4.0,151,272,423,47
+Taliban,8,1995,4.0,0,0,0,4
+Liberation Tigers of Tamil Eelam (LTTE),6,1996,5.0,790,2133,2923,151
+Revolutionary Armed Forces of Colombia (FARC),7,1996,5.0,218,126,344,70
+Liberation Tigers of Tamil Eelam (LTTE),6,1997,6.0,473,529,1002,56
+Revolutionary Armed Forces of Colombia (FARC),7,1997,6.0,255,126,381,152
+Al-Qa`ida,1,1998,7.0,235,4085,4320,2
+Liberation Tigers of Tamil Eelam (LTTE),6,1998,7.0,670,651,1321,34
+Revolutionary Armed Forces of Colombia (FARC),7,1998,7.0,444,30,474,43
+Liberation Tigers of Tamil Eelam (LTTE),6,1999,8.0,205,515,720,41
+Revolutionary Armed Forces of Colombia (FARC),7,1999,8.0,167,96,263,50
+Al-Qa`ida,1,2000,9.0,19,38,57,2
+Liberation Tigers of Tamil Eelam (LTTE),6,2000,9.0,342,800,1142,52
+Revolutionary Armed Forces of Colombia (FARC),7,2000,9.0,256,124,380,67
+Al-Qa`ida,1,2001,10.0,2996,107,3103,5
+Liberation Tigers of Tamil Eelam (LTTE),6,2001,10.0,164,172,336,27
+Revolutionary Armed Forces of Colombia (FARC),7,2001,10.0,133,56,189,48
+Taliban,8,2001,10.0,153,1,154,4
+Al-Qa`ida,1,2002,11.0,100,294,394,14
+Liberation Tigers of Tamil Eelam (LTTE),6,2002,11.0,3,0,3,3
+Revolutionary Armed Forces of Colombia (FARC),7,2002,11.0,335,552,887,111
+Taliban,8,2002,11.0,5,4,9,7
+Al-Qa`ida,1,2003,12.0,73,532,605,14
+Liberation Tigers of Tamil Eelam (LTTE),6,2003,12.0,23,7,30,9
+Revolutionary Armed Forces of Colombia (FARC),7,2003,12.0,132,406,538,61
+Taliban,8,2003,12.0,86,131,217,50
+Al-Qa`ida,1,2004,13.0,28,17,45,6
+Al-Qa`ida in Iraq,2,2004,13.0,69,31,100,6
+Liberation Tigers of Tamil Eelam (LTTE),6,2004,13.0,24,24,48,23
+Revolutionary Armed Forces of Colombia (FARC),7,2004,13.0,65,189,254,26
+Taliban,8,2004,13.0,192,129,321,55
+Al-Qa`ida,1,2005,14.0,29,52,81,2
+Al-Qa`ida in Iraq,2,2005,14.0,806,1648,2455,68
+Liberation Tigers of Tamil Eelam (LTTE),6,2005,14.0,75,186,261,101
+Revolutionary Armed Forces of Colombia (FARC),7,2005,14.0,131,74,205,30
+Taliban,8,2005,14.0,293,200,493,120
+Al-Qa`ida,1,2006,15.0,20,22,42,3
+Al-Qa`ida in Iraq,2,2006,15.0,99,74,173,5
+Liberation Tigers of Tamil Eelam (LTTE),6,2006,15.0,684,695,1379,159
+Revolutionary Armed Forces of Colombia (FARC),7,2006,15.0,59,86,145,33
+Taliban,8,2006,15.0,476,485,961,164
+Al-Qa`ida,1,2007,16.0,63,161,224,4
+Al-Qa`ida in Iraq,2,2007,16.0,621,1440,2061,40
+Al-Shabaab,3,2007,16.0,135,40,175,6
+Liberation Tigers of Tamil Eelam (LTTE),6,2007,16.0,405,541,946,108
+Revolutionary Armed Forces of Colombia (FARC),7,2007,16.0,55,98,153,23
+Taliban,8,2007,16.0,745,508,1253,207
+Tehrik-i-Taliban Pakistan (TTP),9,2007,16.0,14,26,40,1
+Al-Qa`ida,1,2008,17.0,41,227,268,4
+Al-Qa`ida in Iraq,2,2008,17.0,416,760,1176,42
+Al-Shabaab,3,2008,17.0,112,110,222,26
+Liberation Tigers of Tamil Eelam (LTTE),6,2008,17.0,275,887,1162,70
+Revolutionary Armed Forces of Colombia (FARC),7,2008,17.0,34,198,232,89
+Taliban,8,2008,17.0,750,611,1361,257
+Tehrik-i-Taliban Pakistan (TTP),9,2008,17.0,324,349,673,112
+Al-Qa`ida in Iraq,2,2009,18.0,258,782,1040,22
+Al-Shabaab,3,2009,18.0,240,385,625,57
+Boko Haram,4,2009,18.0,304,0,304,10
+Liberation Tigers of Tamil Eelam (LTTE),6,2009,18.0,143,496,639,27
+Revolutionary Armed Forces of Colombia (FARC),7,2009,18.0,91,125,216,104
+Taliban,8,2009,18.0,683,942,1625,268
+Tehrik-i-Taliban Pakistan (TTP),9,2009,18.0,658,1327,1985,156
+Al-Qa`ida in Iraq,2,2010,19.0,223,561,784,37
+Al-Shabaab,3,2010,19.0,206,242,448,71
+Boko Haram,4,2010,19.0,72,130,202,17
+Liberation Tigers of Tamil Eelam (LTTE),6,2010,19.0,0,0,0,2
+Revolutionary Armed Forces of Colombia (FARC),7,2010,19.0,53,138,191,120
+Taliban,8,2010,19.0,627,861,1488,306
+Tehrik-i-Taliban Pakistan (TTP),9,2010,19.0,840,1338,2178,160
+Al-Qa`ida,1,2011,20.0,1,0,1,1
+Al-Qa`ida in Iraq,2,2011,20.0,257,687,944,31
+Al-Shabaab,3,2011,20.0,264,492,756,162
+Boko Haram,4,2011,20.0,327,453,780,125
+Revolutionary Armed Forces of Colombia (FARC),7,2011,20.0,40,66,106,83
+Taliban,8,2011,20.0,811,808,1619,215
+Tehrik-i-Taliban Pakistan (TTP),9,2011,20.0,640,1207,1847,119
+Al-Qa`ida in Iraq,2,2012,21.0,936,2587,3524,303
+Al-Shabaab,3,2012,21.0,707,859,1566,232
+Boko Haram,4,2012,21.0,1251,827,2078,423
+Revolutionary Armed Forces of Colombia (FARC),7,2012,21.0,159,377,536,85
+Taliban,8,2012,21.0,2583,3019,5603,796
+Tehrik-i-Taliban Pakistan (TTP),9,2012,21.0,973,1289,2262,172
+Al-Qa`ida in Iraq,2,2013,22.0,421,939,1361,80
+Al-Shabaab,3,2013,22.0,739,859,1598,319
+Boko Haram,4,2013,22.0,1728,380,2108,233
+Islamic State of Iraq and the Levant (ISIL),5,2013,22.0,1456,3648,5104,373
+Revolutionary Armed Forces of Colombia (FARC),7,2013,22.0,105,216,321,104
+Taliban,8,2013,22.0,2734,2674,5408,773
+Tehrik-i-Taliban Pakistan (TTP),9,2013,22.0,729,1437,2166,156
+Al-Shabaab,3,2014,23.0,1781,1042,2824,864
+Boko Haram,4,2014,23.0,7111,1785,8896,493
+Islamic State of Iraq and the Levant (ISIL),5,2014,23.0,9324,6492,15816,1241
+Revolutionary Armed Forces of Colombia (FARC),7,2014,23.0,88,255,343,163
+Taliban,8,2014,23.0,4110,3651,7761,1032
+Tehrik-i-Taliban Pakistan (TTP),9,2014,23.0,781,929,1710,166
+Islamic State of Iraq and the Levant (ISIL),5,1992,1.0,0,0,0,0
+Boko Haram,4,2004,13.0,0,0,0,0
+Al-Shabaab,3,1996,5.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,2002,11.0,0,0,0,0
+Tehrik-i-Taliban Pakistan (TTP),9,2006,15.0,0,0,0,0
+Al-Qa`ida,1,1994,3.0,0,0,0,0
+Al-Shabaab,3,2006,15.0,0,0,0,0
+Taliban,8,1997,6.0,0,0,0,0
+Liberation Tigers of Tamil Eelam (LTTE),6,2013,22.0,0,0,0,0
+Boko Haram,4,1999,8.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,1997,6.0,0,0,0,0
+Tehrik-i-Taliban Pakistan (TTP),9,1992,1.0,0,0,0,0
+Al-Qa`ida in Iraq,2,1994,3.0,0,0,0,0
+Tehrik-i-Taliban Pakistan (TTP),9,1997,6.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,2008,17.0,0,0,0,0
+Boko Haram,4,2001,10.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,2007,16.0,0,0,0,0
+Al-Qa`ida,1,1993,2.0,0,0,0,0
+Al-Qa`ida,1,2010,19.0,0,0,0,0
+Liberation Tigers of Tamil Eelam (LTTE),6,2014,23.0,0,0,0,0
+Boko Haram,4,1992,1.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,1998,7.0,0,0,0,0
+Al-Qa`ida in Iraq,2,1993,2.0,0,0,0,0
+Boko Haram,4,2002,11.0,0,0,0,0
+Al-Shabaab,3,2001,10.0,0,0,0,0
+Al-Qa`ida,1,1996,5.0,0,0,0,0
+Al-Qa`ida,1,2009,18.0,0,0,0,0
+Al-Qa`ida in Iraq,2,2003,12.0,0,0,0,0
+Boko Haram,4,2008,17.0,0,0,0,0
+Al-Qa`ida in Iraq,2,1996,5.0,0,0,0,0
+Al-Shabaab,3,1992,1.0,0,0,0,0
+Tehrik-i-Taliban Pakistan (TTP),9,2002,11.0,0,0,0,0
+Al-Shabaab,3,2002,11.0,0,0,0,0
+Taliban,8,1993,2.0,0,0,0,0
+Al-Qa`ida,1,2012,21.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,1993,2.0,0,0,0,0
+Tehrik-i-Taliban Pakistan (TTP),9,1993,2.0,0,0,0,0
+Boko Haram,4,2005,14.0,0,0,0,0
+Al-Shabaab,3,1997,6.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,2003,12.0,0,0,0,0
+Taliban,8,1998,7.0,0,0,0,0
+Boko Haram,4,1996,5.0,0,0,0,0
+Liberation Tigers of Tamil Eelam (LTTE),6,1993,2.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,1994,3.0,0,0,0,0
+Tehrik-i-Taliban Pakistan (TTP),9,1998,7.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,2009,18.0,0,0,0,0
+Boko Haram,4,2006,15.0,0,0,0,0
+Al-Shabaab,3,1998,7.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,2004,13.0,0,0,0,0
+Tehrik-i-Taliban Pakistan (TTP),9,2004,13.0,0,0,0,0
+Taliban,8,2000,9.0,0,0,0,0
+Boko Haram,4,1993,2.0,0,0,0,0
+Revolutionary Armed Forces of Colombia (FARC),7,1993,2.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,1999,8.0,0,0,0,0
+Al-Qa`ida in Iraq,2,1992,1.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,2010,19.0,0,0,0,0
+Boko Haram,4,2003,12.0,0,0,0,0
+Al-Qa`ida,1,1999,8.0,0,0,0,0
+Boko Haram,4,1994,3.0,0,0,0,0
+Al-Qa`ida in Iraq,2,2002,11.0,0,0,0,0
+Al-Qa`ida in Iraq,2,1999,8.0,0,0,0,0
+Al-Shabaab,3,1993,2.0,0,0,0,0
+Tehrik-i-Taliban Pakistan (TTP),9,2003,12.0,0,0,0,0
+Al-Shabaab,3,2003,12.0,0,0,0,0
+Taliban,8,1994,3.0,0,0,0,0
+Al-Qa`ida in Iraq,2,2001,10.0,0,0,0,0
+Tehrik-i-Taliban Pakistan (TTP),9,1994,3.0,0,0,0,0
+Al-Shabaab,3,1994,3.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,2000,9.0,0,0,0,0
+Tehrik-i-Taliban Pakistan (TTP),9,2000,9.0,0,0,0,0
+Al-Shabaab,3,2004,13.0,0,0,0,0
+Taliban,8,1999,8.0,0,0,0,0
+Liberation Tigers of Tamil Eelam (LTTE),6,2011,20.0,0,0,0,0
+Boko Haram,4,1997,6.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,1995,4.0,0,0,0,0
+Tehrik-i-Taliban Pakistan (TTP),9,1999,8.0,0,0,0,0
+Boko Haram,4,2007,16.0,0,0,0,0
+Al-Shabaab,3,1999,8.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,2005,14.0,0,0,0,0
+Tehrik-i-Taliban Pakistan (TTP),9,2005,14.0,0,0,0,0
+Al-Qa`ida,1,1995,4.0,0,0,0,0
+Taliban,8,1996,5.0,0,0,0,0
+Liberation Tigers of Tamil Eelam (LTTE),6,2012,21.0,0,0,0,0
+Boko Haram,4,1998,7.0,0,0,0,0
+Al-Qa`ida in Iraq,2,2014,23.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,1996,5.0,0,0,0,0
+Al-Qa`ida in Iraq,2,1995,4.0,0,0,0,0
+Tehrik-i-Taliban Pakistan (TTP),9,1996,5.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,2011,20.0,0,0,0,0
+Boko Haram,4,2000,9.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,2006,15.0,0,0,0,0
+Boko Haram,4,1995,4.0,0,0,0,0
+Al-Qa`ida in Iraq,2,1998,7.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,2012,21.0,0,0,0,0
+Al-Shabaab,3,2000,9.0,0,0,0,0
+Al-Qa`ida,1,1997,6.0,0,0,0,0
+Al-Qa`ida,1,2014,23.0,0,0,0,0
+Al-Qa`ida in Iraq,2,2000,9.0,0,0,0,0
+Tehrik-i-Taliban Pakistan (TTP),9,1995,4.0,0,0,0,0
+Al-Qa`ida in Iraq,2,1997,6.0,0,0,0,0
+Al-Shabaab,3,1995,4.0,0,0,0,0
+Islamic State of Iraq and the Levant (ISIL),5,2001,10.0,0,0,0,0
+Tehrik-i-Taliban Pakistan (TTP),9,2001,10.0,0,0,0,0
+Al-Shabaab,3,2005,14.0,0,0,0,0
+Taliban,8,1992,1.0,0,0,0,0
+Al-Qa`ida,1,2013,22.0,0,0,0,0

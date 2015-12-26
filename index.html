@@ -1,0 +1,752 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="robots" content="noindex">
+  <meta charset="utf-8">
+  <title>Global Terrorism Distribution</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css">
+
+  <script src="http://d3js.org/d3.v3.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link href="css/main.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/dc.css"/>
+  <link rel="stylesheet" href="css/index.css">
+  
+
+</head>
+
+<body style="height:100%;">
+
+<div id="header" class="" style="padding-top: 100px; padding-bottom: 50px; background-color:#fff;">
+  <div class="section tk-futura-pt tool-bar" style="">
+    <div class="" style="height:auto; position:absolute; z-index:10; margin: 0 auto; width:100%; ">
+      <div class="" style="height:auto; width: 540px; margin: 0 auto;">
+        <p class="tk-ff-tisa-web-pro" style=""><a href="http://www.poly-graph.co">Global Terrorism Distributions</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="center medium-width tk-futura-pt" style="margin-top:50px;">
+    <p class="bread-leadhead" style="font-size:48px; color:rgb(35,35,35);">TERRORISM IS EXPANDING AS THE TOP THREAT OF THE WORLD</p>
+  </div>
+  <div style="height:80px;"></div>
+  <div class="medium-width tk-merriweather black header-body-text">
+    <div class="body-text">
+      <p>The emergence of modern terrorism can be traced back to the beginning of 19th centuries. In the recent two decades, the development of terrorism has evolved in types of attacks, scales and frenquency dramatically. The Iraq War, the Syrian Cival War have stimulated the inheritance of new terrorist organizations and worsen the situation of mid-East. Nowadays, the attack of France by ISIS in November, 2015 is the milestone that marks the formation of anti-terrorism alliance in the worldwide.
+      </p>
+      <p>The following visualizations spots on the trend and changes of terrorism disributions globally. We are focusing on facilitating analysts on evaluating the trends by two concerns: victim countries and terrorism organizations.
+      </p>
+      <p>Terror attacks are more severe in the recent 3 years than in the past. Iraq, Pakistan, Afghanistan are the most suffered countries of all times. By selecting the time period and country of interest, you may overview and visualize the trend and changes of attacks in countries.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="black" id="body-section" style="background-color:#EAEAEA; padding-top: 40px; padding-bottom: 40px; font-family:Arial;font-size:11px">
+  <div class="large-width" id="sec1">
+    <text class="chart-title">Distribution of Terrorism attacks by Countries from 1992 to 2014</text>
+    <div class="chart-sub-title" style="padding-top:10px">Total number of attacks over time:</div>
+
+    <br>
+    <div id="totalKill"></div>
+    <div>
+      <div id="slider" ></div>
+    </div>
+
+    <div class="row">
+      <div id="chart" class="col-sm-4"></div>
+      <div id="map" class="col-sm-8"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6" style="font-size:15px;font-weight:bold">Attack Fatalities</div>
+      <div class="col-sm-6" style="font-size:15px;font-weight:bold">Attacks by weapon types</div>
+    </div>
+
+    <div class="">
+      <div id="circlesmap">
+          <div style="font-weight:bold "> Country: All   
+            <button type="button" class="btn btn-secondary btn-sm" onclick="WORLDMAP.unselect()">Clear Selection</button>
+          </div>
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div id="fatal" class="col-sm-6"></div> 
+      <div id="weapon" class="col-sm-6"></div>
+    </div>
+  </div>
+
+    <script src="libs/datamaps.world.min.js"></script>
+    <script src="libs/underscore-min.js"></script>
+    <script src="libs/crossfilter.js"></script>
+    <script src="libs/dc.js"></script>
+
+
+    <script src="data/country_name_mapping.js"></script>
+    <script src="src/worldmap.js"></script>
+    <script src="src/slider.js"></script>
+    <script src="src/circlesmap.js"></script>
+    <script src="src/main.js"></script>
+    
+    <a href="https://github.com/parano/Global-Terrorism-Visualization"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+
+   
+  </div>
+</div>
+
+<div class="medium-width tk-merriweather black header-body-text" style="padding-top:20px">
+    <div class="body-text">
+      <p> Like dynasties in the history, the rise and fail of terrorism organizations are rapid and unpredictable. Among the 9 most active terrorism organizations in the recent 15 year, Liberation Tigers of Tamil Eelam (LTTE) and Revolutionary Armed Forces of Colombia (FARC) used to be the mojor threat the world security while Islamic State of Iraq and the Levant (ISIL), now known as Islamic State of Iraq and Syria (ISIS) is the new born black horse in the recent two years with unprecedent violent forces than ever. Analyst may associate the evolution patterns of the terrorism organizations with events happening at some particular time and further analyze the past and predict the future of them.
+      </p>
+    </div>
+</div>
+
+<div class="black" id="body-section" style="background-color:#EAEAEA; padding-top: 40px; padding-bottom: 40px; font-family:Arial;font-size:11px">
+  <div class="large-width">
+    <text class="chart-title">9 Most Active Terrorism Organizations From 1992 to 2014</text>
+    <br>
+    <div id="terror_chart">
+       <div class="row">
+        <div class="col-sm-4 chart-sub-title" style="padding-top:10px">By feature of interest: </div>
+        <div class="col-sm-8">
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-default" onclick="heatmapChart('nkill')">
+                    <input type="radio" id="q156" name="quality[25]" value="1" /> No. Kills
+                </label> 
+                <label class="btn btn-default" onclick="heatmapChart('nwound')">
+                    <input type="radio" id="q157" name="quality[25]" value="2" /> No. Injured
+                </label> 
+                <label id="casualty"class="btn btn-default active" onclick="heatmapChart('casualty')">
+                    <input type="radio" id="q158" name="quality[25]" value="3" /> No. Casualities
+                </label> 
+                <label class="btn btn-default" onclick="heatmapChart('counts')">
+                    <input type="radio" id="q159" name="quality[25]" value="4" /> No. Attacks
+                </label> 
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="tooltip" class="hidden"></div>
+
+    <div>
+      <div  id = "map_container">
+        <div >   
+          <text class="chart-sub-title"> Geographical Distributions for no. attacks in year range: </text>
+          <div id="slider-range" style="width: 200px;margin-left:10px;display:inline-block"></div>
+          <div style="display:inline-block ;margin-left:10px;margin-top:-2px;">
+            <label class="btn btn-default" onclick="reset()">
+                <text id="q160" name="quality[25]" value="5" /> Reset
+            </label>
+          </div>
+
+        </div>
+      </div>
+      
+      <div class="row" style="padding-top:20px">
+      <div id="map_legend" class="col-sm-2" ></div>
+      <div id="global_map" class="col-sm-8" ></div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+      <script type="text/javascript">
+        //google.load('visualization', '1', { 'packages': ['map'] });
+        //google.setOnLoadCallback(google_map);
+        var start_year = 1992;    // inclusive
+        var end_year = 2014;      // inclusive
+        var map_gname = ['ALL'];
+
+        var margin = { top: 0, right: 0, bottom: 100, left: 150 },
+            gridSize = 35;
+            legendElementWidth = gridSize*2;
+            legend_height = 20;
+            width = 960 - margin.left - margin.right,
+            title_height = 50;
+            height = 500 - margin.top - margin.bottom - title_height - legend_height,
+            buckets = 9,
+            temp = 1,
+            colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"], // alternatively colorbrewer.YlGnBu[9]
+
+            gnames = ['Al-Qa`ida', 'Al-Qa`ida in Iraq', 'Al-Shabaab', 'Boko Haram', 'Islamic State of Iraq and the Levant (ISIL)', 'Liberation Tigers of Tamil Eelam (LTTE)',
+             'Revolutionary Armed Forces of Colombia (FARC)', 'Taliban', 'Tehrik-i-Taliban Pakistan (TTP)'], // change to gene name or probe id
+
+            years = ['1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014']; // change to contrast name
+
+            //gridSize = Math.floor(width / years.length),
+            
+
+            //datasets = ["data.csv", "data2.csv"];
+            datasets = ["data/simplified.csv"];
+
+        var svg = d3.select("#terror_chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom + title_height)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            var tooltip = d3.select("body").append("div").attr("class","tooltips");
+            //tooltip.append("div").attr("class","text");
+
+            tooltip.append("div").attr("class","gname");
+            tooltip.append("div").attr("class","year");
+            tooltip.append("div").attr("class","date");
+            tooltip.append("div").attr("class","location");
+            //tooltip.append("div").attr("class","city");
+            tooltip.append("div").attr("class","casualty");
+            tooltip.append("div").attr("class","kill");
+            tooltip.append("div").attr("class","wound");
+            tooltip.append("div").attr("class","counts");
+            tooltip.append("div").attr("class","longitude");
+            tooltip.append("div").attr("class","latitude");
+            tooltip.append("div").attr("class","total_events");
+            tooltip.append("div").attr("class","valid_events");
+
+            function clear_tooltip(){
+              tooltip.select('.gname').html('');
+              tooltip.select('.year').html('');
+              tooltip.select('.counts').html('');
+              tooltip.select('.date').html('');
+              tooltip.select('.casualty').html('');
+              tooltip.select('.kill').html('');
+              tooltip.select('.wound').html('');
+              tooltip.select('.longitude').html('');
+              tooltip.select('.latitude').html('');
+              tooltip.select('.location').html('');
+              tooltip.select('.total_events').html('');
+              tooltip.select('.valid_events').html('');
+              tooltip.style('display', 'none');
+            }
+
+        function gname_abbreviate(gname){
+          if (gname == 'Islamic State of Iraq and the Levant (ISIL)')
+                  return 'ISIL'
+          else if (gname == 'Liberation Tigers of Tamil Eelam (LTTE)')
+                  return 'LTTE'
+          else if (gname == 'Revolutionary Armed Forces of Colombia (FARC)')
+                  return 'FARC'
+          else if (gname == 'Tehrik-i-Taliban Pakistan (TTP)')
+                  return 'TTP'
+          else 
+                  return gname
+          
+        }
+        var gnameLabels = svg.selectAll(".gnameLabel")
+            .data(gnames)
+            .enter().append("text")
+              .text(function (d) {return gname_abbreviate(d)})
+              .attr("x", -140)
+              .attr("y", function (d, i) { return i * gridSize + title_height; })
+              .on('click', function(d, i) {
+                start_year = 1992;
+                end_year = 2014;
+                map_gname = [d];
+                d3.selectAll("#map_legend g").style("opacity", 0.3);
+                d3.select("#map_legend").select("g:nth-child(" + (i+1) + ")").style("opacity", 1);
+                draw_map();
+              })
+              .style("text-anchor", "start")
+              .attr("transform", "translate(-6," + gridSize / 1.5 + ")")
+              //.attr("class", function (d, i) { return ((i >= 0 && i <= 4) ? "dayLabel mono axis axis-workweek" : "dayLabel mono axis"); });     ?
+              .on('mouseover', function(d){
+                                  //console.log(d);
+                                  clear_tooltip();
+                                  tooltip.select('.gname').html(d);
+                                  
+                                  tooltip.style('display', 'block')
+                                         .style('left', (d3.event.pageX - 34) + 'px')
+                                         .style('top', (d3.event.pageY + 20) + 'px');
+                               }
+                 )
+              .on('mouseout', function(){
+                       //d3.select(this).attr('fill', 'green');
+                       //tooltip.style('display', 'none');
+                       clear_tooltip();
+                 });
+
+        var yearLabels = svg.selectAll(".yearLabel")
+            .data(years)
+            .enter().append("text")
+              .text(function(d) { return d; })
+              .attr("x", function(d, i) { return i * gridSize; })
+              .attr("y", title_height)
+              .style("text-anchor", "middle")
+              .on('click', function(d, i) { 
+                start_year = d; 
+                end_year = d; 
+                map_gname = ['ALL'];
+                d3.selectAll("#map_legend g").style("opacity", 1);
+                set_slider();
+                draw_map()
+              })
+              .attr("transform", "translate(" + gridSize / 2 + ", -6)")
+              //.attr("class", function(d, i) { return ((i >= 7 && i <= 16) ? "timeLabel mono axis axis-worktime" : "timeLabel mono axis"); });     ?
+
+        var heatmapChart = function(measure) {
+          d3.csv('data/simplified.csv',
+          function(d) {
+            svg = d3.select("#terror_chart").select("svg").select("g")
+            console.log(svg);
+                      var temp = svg.append("g");
+
+            return {
+              year:     +d.year,
+              gname:    d.gname,
+              casualty: +d.casualty,
+              row:      gnames.indexOf(d.gname),
+              col:      +d.year - 1992,
+              nkill:    +d.nkill,
+              nwound:   +d.nwound,
+              counts:   +d.counts
+            };
+          },
+          function(error, data) {
+                      var temp = svg.append("g");
+
+          var colorScale = d3.scale.quantile()
+                .domain([0, buckets - 1, d3.max(data, function (d) { return Math.sqrt(d[measure]); })])
+                .range(colors);
+
+
+          var heatMap = svg.append("g").attr("class","g3")
+          .selectAll(".cellg")
+          .data(data,function(d){return d.row+":"+d.col;})
+          .enter()
+          .append("rect")
+          .attr("rx", 4)
+          .attr("ry", 4)
+          .attr("x", function(d) { return d.col * gridSize; })
+          .attr("y", function(d) { return d.row * gridSize + title_height; })
+          .attr("class", function(d){return "cell cell-border cr"+(d.row-1)+" cc"+(d.col-1);})
+          .attr("width", gridSize)
+          .attr("height", gridSize)
+          .style("fill", function(d) {return colorScale(Math.sqrt(d[measure])); })
+          .on('click', function(d, i){
+                                    map_gname = [d.gname];
+                                    console.log("here"+ gnames.indexOf(d.gname));
+                                    d3.selectAll("#map_legend g").style("opacity", 0.3);
+                                    d3.select("#map_legend").select("g:nth-child(" + (gnames.indexOf(d.gname)+1) + ")").style("opacity", 1);
+                                    start_year = d.year;
+                                    end_year = d.year;
+                                    set_slider();
+                                    draw_map()
+                                  })
+          .on('mouseover', function(d){
+
+                tooltip.select('.gname').html(d.gname);
+                tooltip.select('.year').html("Year: "+ d.year);
+                tooltip.select('.casualty').html("Casualty: " + (d.nkill + d.nwound));
+                tooltip.select('.kill').html("Killed: " + d.nkill);
+                tooltip.select('.wound').html("Wounded: " + d.nwound);
+                tooltip.select('.counts').html("Counts: " + d.counts);
+
+                //console.log(d.casualty);
+
+                //tooltip.select('.kill').html("Killed: "+ d.nkill);
+                //tooltip.select('.wound').html("Injured: "+ d.nwound);
+
+                tooltip.style('display', 'block')
+                       .style('left', (d3.event.pageX - 34) + 'px')
+                       .style('top', (d3.event.pageY + 20) + 'px');
+                })
+          .on('mouseout', function(){
+                //d3.select(this).attr('fill', 'green');
+                //tooltip.style('display', 'none');
+                clear_tooltip();
+          });
+          console.log(4);
+
+          var legend = svg.selectAll(".legend")
+                .data([0].concat(colorScale.quantiles()), function(d) { return d; });
+
+            legend.enter().append("g")
+                .attr("class", "legend");
+
+            legend.append("rect")
+              .attr("x", function(d, i) { return legendElementWidth * i; })
+              //.attr("y", gnames.length * gridSize + 20)
+              .attr("y", gnames.length * gridSize + 20 + title_height)
+              .attr("width", legendElementWidth)
+              .attr("height", gridSize / 2)
+              .style("fill", function(d, i) { return colors[i]; });
+
+            legend.append("text")
+              .attr("class", "mono")
+              .text(function(d) { return "≥ " + Math.round(d * d); })
+              .attr("x", function(d, i) { return legendElementWidth * i; })
+              .attr("y", gnames.length * gridSize + 20 + gridSize + title_height);
+
+            legend.exit().remove();
+
+          });
+        };
+
+        var measurepicker = d3.select("#measure-picker").selectAll(".measure-button")
+          .data(['By Kills', 'By Injured', 'By Casualty', 'By Counts', 'Reset']);
+
+        function reset(){
+          //$('#casualty').click();
+          //heatmapChart('casualty');
+          start_year = 1992;
+          end_year = 2014;
+          map_gname = ['ALL'];
+          d3.selectAll("#map_legend g").style("opacity", 1);
+          set_slider();
+          draw_map();
+        }
+
+
+        function remove_element(classname){
+          //console.log('Removing ' + classname);
+          name = '.' + classname;
+
+          if ($(name)[0]){
+              // Do something if class exists
+              //svg.selectAll("geo_circle").html()
+
+              var paras = document.getElementsByClassName(classname);
+
+              while(paras[0])
+                  paras[0].parentNode.removeChild(paras[0]);
+            } else {
+            // Do something if class does not exist
+              //console.log('None found')
+              var _ = 1;
+            }
+        }
+        var color_mapping = {
+              'Al-Qa`ida': '#458B74',
+              'Al-Qa`ida in Iraq': '#CDB72E', 
+              'Al-Shabaab': '#0000CD', 
+              'Boko Haram': '#EE3B3B', 
+              'Islamic State of Iraq and the Levant (ISIL)': '#7AC5CD', 
+              'Liberation Tigers of Tamil Eelam (LTTE)': '#66CD00',
+              'Revolutionary Armed Forces of Colombia (FARC)': '#EE6A50', 
+              'Taliban': '#8B008B', 
+              'Tehrik-i-Taliban Pakistan (TTP)': '#FF1493'
+            }
+
+        var refresh_counts = 0;
+
+        var counts = {
+              'Al-Qa`ida': {'total': 0, 'valid': 0},
+              'Al-Qa`ida in Iraq': {'total': 0, 'valid': 0}, 
+              'Al-Shabaab': {'total': 0, 'valid': 0}, 
+              'Boko Haram': {'total': 0, 'valid': 0}, 
+              'Islamic State of Iraq and the Levant (ISIL)': {'total': 0, 'valid': 0}, 
+              'Liberation Tigers of Tamil Eelam (LTTE)': {'total': 0, 'valid': 0},
+              'Revolutionary Armed Forces of Colombia (FARC)': {'total': 0, 'valid': 0}, 
+              'Taliban': {'total': 0, 'valid': 0}, 
+              'Tehrik-i-Taliban Pakistan (TTP)': {'total': 0, 'valid': 0}
+            }
+
+        function draw_map(){
+            refresh_counts = refresh_counts + 1;
+            console.log('gname: ' + map_gname + start_year + '-' + end_year);
+            var width = 800,
+                height = 500;
+
+            var projection = d3.geo.mercator()
+                .center([0, 5 ])
+                .scale(200)
+                .rotate([0,0]);
+            //d3.select("map_svg").html('');
+            remove_element("map_svg");
+            remove_element("geo_circle");
+
+            var svg = d3.select("#global_map")
+                .append('svg')
+                .attr("width", width)
+                .attr("height", height)
+                .attr("class",  "map_svg");
+
+            counts = {
+              'Al-Qa`ida': {'total': 0, 'valid': 0},
+              'Al-Qa`ida in Iraq': {'total': 0, 'valid': 0}, 
+              'Al-Shabaab': {'total': 0, 'valid': 0}, 
+              'Boko Haram': {'total': 0, 'valid': 0}, 
+              'Islamic State of Iraq and the Levant (ISIL)': {'total': 0, 'valid': 0}, 
+              'Liberation Tigers of Tamil Eelam (LTTE)': {'total': 0, 'valid': 0},
+              'Revolutionary Armed Forces of Colombia (FARC)': {'total': 0, 'valid': 0}, 
+              'Taliban': {'total': 0, 'valid': 0}, 
+              'Tehrik-i-Taliban Pakistan (TTP)': {'total': 0, 'valid': 0}
+            }
+            //var projection = d3.geo.albers()
+              //                 .scale(1000)
+            var path = d3.geo.path()
+                .projection(projection);
+
+
+            var g = svg.append("g")
+                       .attr('id', 'special')
+                       .attr("width", width - 50)
+                       .attr("height", height - 50);
+
+            
+            // load and display the World
+            d3.json("data/world-110m2.json", function(error, topology) {
+            //d3.json("https://gist.githubusercontent.com/abenrob/787723ca91772591b47e/raw/8a7f176072d508218e120773943b595c998991be/world-50m.json", function(error, topology) {
+            // load and display the cities
+            d3.csv("data/detailed.csv",
+
+              function(error, data) {
+                //console.log('in function');
+                  console.log(counts);
+                  filtered = []
+                  total_events = 0;
+                  valid_events = 0;
+                  for (var i in data){
+                    var row = data[i];
+                    //console.log(row);
+                    if (+row.iyear < start_year || +row.iyear > end_year)
+                      continue;
+                    counts[row.gname]['total'] = counts[row.gname]['total'] + 1;
+
+
+                    if(row.longitude.length > 0 && row.latitude.length > 0){
+                      counts[row.gname]['valid'] = counts[row.gname]['valid'] + 1;
+                      if (map_gname.indexOf(row.gname) >=0 || map_gname[0] == 'ALL'){
+                          filtered.push(row)
+                      }
+                    }
+                  }
+
+                  var month_mapping = ['DUMMY', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',                   'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                  g.selectAll("circle")
+                   .data(filtered)
+                   .enter()
+                   .append("a")
+                                    /*
+                   .attr("xlink:href", function(d) {
+                        return "https://www.google.com/search?q="+d.city;}
+                      )
+                    */
+                   .append("circle")
+                   .attr('class', "geo_circle")
+                   .attr("cx", function(d) {
+                        //console.log(+d.longitude, +d.latitude)
+                        return projection([+d.longitude, +d.latitude])[0];
+                   })
+                   .attr("cy", function(d) {
+                           return projection([+d.longitude, +d.latitude])[1];
+                   })
+                   .on('mouseover', function(d){
+                                  //console.log(d);
+
+                                  tooltip.select('.gname').html(d.gname);
+                                  tooltip.select('.date').html('Date: ' + month_mapping[+d.imonth] + '-' + d.iday+ '-' + d.iyear );
+                                  tooltip.select('.location').html("Location: " + d.city + ', ' + d.country_txt);
+                                  tooltip.select('.city').html("City: " + d.city);
+                                  tooltip.select('.casualty').html('Casualty: ' + d.casualty);
+                                  tooltip.select('.kill').html('Killed: ' + d.nkill);
+                                  tooltip.select('.wound').html('Wounded: ' + d.nwound);
+                                  tooltip.select('.longitude').html("Longitude: " + d.longitude);
+                                  tooltip.select('.latitude').html("Latitude: " + d.latitude);
+
+                                  tooltip.style('display', 'block')
+                                         .style('left', (d3.event.pageX - 34) + 'px')
+                                         .style('top', (d3.event.pageY + 20) + 'px');
+                               }
+                    )
+                   .on('mouseout', function(d){
+                        clear_tooltip()
+                   })
+                   .attr("r", 2)
+                   .attr("opacity", 0.5)
+                   .style("fill", function(d){return color_mapping[d.gname]});
+
+                });
+
+                 g.selectAll("path")
+                  .data(topojson.feature(topology, topology.objects.countries).features)
+                  .enter()
+                  .append("path")
+                  .attr("d", path)
+            });
+
+            // zoom and pan
+            var zoom = d3.behavior.zoom()
+                .on("zoom",function() {
+                    g.attr("transform","translate("+
+                        d3.event.translate.join(",")+")scale("+d3.event.scale+")");
+                    //g.selectAll("circle")
+                        //.attr("d", path.projection(projection));
+                    g.selectAll("path")
+                        .attr("d", path.projection(projection));
+
+              });
+            svg.call(zoom)
+        }
+
+
+            //legend.exit().remove();
+
+          
+          function set_slider() {
+            $( "#slider-range").slider({
+                range: true,
+                min: 1992,
+                max: 2014,
+                values: [ start_year, end_year],
+                slide: function (event, ui) {
+                $('.ui-slider-handle:first').html('<div class="tooltip top slider-tip"><div class="tooltip-arrow"></div><div class="tooltip-inner">' + ui.values[0] + '</div></div>');
+                $('.ui-slider-handle:last').html('<div class="tooltip top slider-tip"><div class="tooltip-arrow"></div><div class="tooltip-inner">' + ui.values[1] + '</div></div>');
+                start_year = ui.values[0];
+                end_year = ui.values[1];
+                draw_map();
+
+                }
+            });
+
+            $('.ui-slider-handle:first').html('<div class="tooltip top slider-tip"><div class="tooltip-arrow"></div><div class="tooltip-inner">' + start_year + '</div></div>');
+            $('.ui-slider-handle:last').html('<div class="tooltip top slider-tip"><div class="tooltip-arrow"></div><div class="tooltip-inner">' + end_year + '</div></div>');
+                
+          }
+        //remove_element("map_legend_rect");
+                //remove_element("mono");
+                //$('.map_legend_rect').remove();
+                var map_legend_height = 11;
+                var spacing = 18;
+                var map_legend = d3.select('#map_legend')
+                .append('svg')
+                //.attr("width", 1200)
+                .attr("height", 300)
+                .selectAll(".map_legend")
+                .data(gnames, function(d) { return d; });
+
+            map_legend.enter().append("g")
+                .attr("class", "map_legend")
+                .attr("id", function(d){return d;});
+
+            map_legend.append("rect")
+              .attr("y", function(d, i) { return (map_legend_height + spacing) * i+map_legend_height/2; })
+              //.attr("y", gnames.length * gridSize + 20)
+              .attr("x", 0)
+              .attr("width", map_legend_height)
+              .attr("height", map_legend_height)
+              .attr("class", "map_legend_rect")
+              .style("fill", function(d, i) { return color_mapping[d]; })
+              .on('mouseover', function(d){
+                                  //console.log(d);
+                                  console.log(counts);
+                                  clear_tooltip();
+                                  tooltip.select('.gname').html(d);
+
+                                  
+                                    console.log(d);
+                                    console.log(counts[d]['total']);
+                                    tooltip.select('.total_events').html(counts[d]['total'] + " attacks in total");
+                                    tooltip.select('.gname').html(counts[d]['valid'] + " attacks have geo information and shown");
+                                  
+                                  tooltip.style('display', 'block')
+                                         .style('left', (d3.event.pageX - 34) + 'px')
+                                         .style('top', (d3.event.pageY + 20) + 'px');
+                               }
+                 )
+              .on('mouseout', function(){
+                       //d3.select(this).attr('fill', 'green');
+                       //tooltip.style('display', 'none');
+                       clear_tooltip();
+                 })
+              .on('click', function(d, i) {
+                start_year = 1992;
+                end_year = 2014;
+                if (map_gname[0] == 'ALL'){
+                  map_gname = [d];
+                  d3.selectAll("#map_legend g").style("opacity", 0.3);
+                  d3.select(this.parentNode).style("opacity", 1);
+                }else{
+                  ind = map_gname.indexOf(d);
+                  if (ind == -1){
+                    map_gname.push(d);
+                    d3.select(this.parentNode).style("opacity", 1);
+                  } else {
+                    map_gname.splice(ind, 1);
+                    d3.select(this.parentNode).style("opacity", 0.3);
+                  }
+                }
+                draw_map();
+              });
+
+            map_legend.append("text")
+              .attr("class", "mono")
+              .text(function(d) { return gname_abbreviate(d); })
+              .attr("x", map_legend_height + 5)
+              .attr("y", function(d, i) { return (map_legend_height + spacing) * i + 15; })
+              .style('fill', function(d){return color_mapping[d]})
+              .on('mouseover', function(d){
+                                  //console.log(d);
+                                  clear_tooltip();
+                                  tooltip.select('.gname').html(d);
+                                  
+                                    tooltip.select('.total_events').html(counts[d]['total'] + " events in total");
+                                    tooltip.select('.gname').html(counts[d]['valid'] + " events have geo information");
+                                  
+
+                                  tooltip.style('display', 'block')
+                                         .style('left', (d3.event.pageX - 34) + 'px')
+                                         .style('top', (d3.event.pageY + 20) + 'px');
+                               }
+                 )
+              .on('mouseout', function(){
+                       //d3.select(this).attr('fill', 'green');
+                       //tooltip.style('display', 'none');
+                       clear_tooltip();
+                 })
+              .on('click', function(d, i) {
+                start_year = 1992;
+                end_year = 2014;
+                if (map_gname[0] == 'ALL'){
+                  map_gname = [d];
+                  d3.selectAll("#map_legend g").style("opacity", 0.3);
+                  d3.select(this.parentNode).style("opacity", 1);
+                }else{
+                  ind = map_gname.indexOf(d);
+                  if (ind == -1){
+                    map_gname.push(d);
+                    d3.select(this.parentNode).style("opacity", 1);
+                  } else {
+                    map_gname.splice(ind, 1);
+                    d3.select(this.parentNode).style("opacity", 0.3);
+                  }
+                }
+                draw_map();
+              });
+
+        set_slider();
+        heatmapChart('casualty');
+        draw_map();
+      </script>
+</div>
+
+
+<div class="share-section black" style="background-color:#fff; padding-top: 40px;">
+  <div class="share-wrapper">
+    <a href="http://poly-graph.co" style="color: black; text-decoration: none;"><p class="logo tk-ff-tisa-web-pro">References</p></a>
+
+    <div class="related-articles">
+      <div class="related-article">
+        <a href="http://www.start.umd.edu/gtd"><div class="related-image" style="background:url('images/GTD.gif') no-repeat">
+        </div></a>
+        <div class="related-content">
+          <a href="http://poly-graph.co/labels/"><p class="related-title tk-futura-pt">Data Sources</p></a>
+          <p class="related-description tk-merriweather">"National Consortium for the Study of Terrorism and Responses to Terrorism (START). (2015). Global Terrorism Database [Data file]. Retrieved from <a href="http://www.start.umd.edu/gtd">http://www.start.umd.edu/gtd</a>".</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>

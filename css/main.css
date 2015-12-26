@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f1f1f1;
+}
+
+a{
+  text-decoration: none;
+	color: #000;
+  background: 0 0;
+  cursor: auto;
+}
+
+a:hover, a:focus {
+  color: #2a6496;
+  text-decoration: underline;
+}
+
+.container {
+  background: #ddd;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#totalKill {
+  padding: 10px 0 14px 0;
+  font: 23px 'Titillium Web', arial, sans-serif;
+  color: #5E545D;
+  text-align: center;
+}
+
+#totalKill b {
+  font-size: 26px;
+}
+
+#slider, #heatmap {
+  width: 100%;
+}
+
+#map {
+  position: relative; 
+  padding-bottom: 32%;
+  height: 0;
+  overflow: hidden;
+  float: none;
+  margin: 0 auto;
+}
+
+#circlesmap {
+  padding-top: -10%;
+}
+
+.axis text {
+  font: 15px sans-serif;
+}
+
+.axis path,
+  /*display: none;*/
+
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdge;
+}
+
+div#country_list{
+  background-color: yellow;
+}
+
+.grid-background {
+  fill: #ddd;
+}
+
+.grid line, .grid path {
+  fill: none;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+.grid .minor.tick line {
+  stroke-opacity: .5;
+}
+
+.brush .extent {
+  stroke: none;
+  fill: #000;
+  fill-opacity: .1;
+  shape-rendering: crispEdges;
+}
+
+#cite {
+  font-size: 14px;
+}
+
+footer{
+  margin: 20px auto 20px auto;
+	font-size: 10px;
+	text-align: center;
+}
+.x-axis path {
+    stroke:white;
+    fill:none;
+}
+.x-axis line {
+    fill: none;
+    stroke: none;
+    stroke-opacity:.8;
+    shape-rendering: crispEdges;
+}
+.bars rect {
+    fill:steelblue;
+    fill-opacity:.9;
+}
+.title {
+    font-weight: bold;
+}
+#precise-value {
+    fill:white;
+    font-size: 12px;
+}
+.datamaps-legend {
+  position: static;
+}
